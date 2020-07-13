@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 public class FirstTask {
     Logger logger = LoggerFactory.getLogger(FirstTask.class);
     @Scheduled(fixedRate = 1000*3)
-    public void test(){
+    public void starttask(){
         logger.info("===开始调度程序===");
 
 
