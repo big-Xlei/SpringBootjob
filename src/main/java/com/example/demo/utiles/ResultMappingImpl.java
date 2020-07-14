@@ -1,57 +1,50 @@
-package com.example.demo.utile.Impl;
+package com.example.demo.utiles;
 
 import com.example.demo.bean.Result;
 import com.example.demo.bean.ResultCode;
-import com.example.demo.utile.ResultMapping;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class ResultMappingImpl implements ResultMapping {
+public class ResultMappingImpl {
 
 
-    @Override
-    public Result success() {
+    public static Result success() {
         String time = getTime();
         int ok = ResultCode.OK.getValue();
         Result res = new Result(ok,time,null);
         return res;
     }
 
-    @Override
-    public Result success( Object data) {
+    public static Result success( Object data) {
         String time = getTime();
         int ok = ResultCode.OK.getValue();
         Result res = new Result(ok,time,data);
         return res;
     }
 
-    @Override
-    public Result error() {
+    public static Result error() {
         String time = getTime();
         int error = ResultCode.ERROR.getValue();
         Result res = new Result(error,time,null);
         return res;
     }
 
-    @Override
-    public Result error(Object data) {
+    public static Result error(Object data) {
         String time = getTime();
         int error = ResultCode.ERROR.getValue();
         Result res = new Result(error,time,data);
         return res;
     }
 
-    @Override
-    public Result exception() {
+    public static Result exception() {
         String time = getTime();
         int exception = ResultCode.EXCEPTION.getValue();
         Result res = new Result(exception,time,null);
         return res;
     }
 
-    @Override
-    public Result exception(Object data) {
+    public static Result exception(Object data) {
         String time = getTime();
         int exception = ResultCode.EXCEPTION.getValue();
         Result res = new Result(exception,time,data);
@@ -60,7 +53,7 @@ public class ResultMappingImpl implements ResultMapping {
 
 
     public static String getTime(){
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-dd HH24:min:ss");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-dd hh:mm:ss");
         Calendar instance = Calendar.getInstance();
         instance.add(Calendar.DATE,0);
         String time = simpleDateFormat.format(instance.getTime());
