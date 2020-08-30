@@ -2,15 +2,22 @@
 //
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
+//import org.springframework.scheduling.annotation.Async;
+//import org.springframework.scheduling.annotation.EnableAsync;
+//import org.springframework.scheduling.annotation.EnableScheduling;
 //import org.springframework.scheduling.annotation.Scheduled;
 //import org.springframework.stereotype.Component;
 //
 //
 //
 //@Component
+//@EnableScheduling
+//@EnableAsync
 //public class FirstTask {
 //    Logger logger = LoggerFactory.getLogger(FirstTask.class);
 //    @Scheduled(fixedRate = 1000*3)
+//
+//    @Async
 //    public void starttask(){
 //        logger.info("===开始调度程序===");
 //
