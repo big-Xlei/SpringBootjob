@@ -74,8 +74,8 @@ public class UpLoadAndDownLoad {
     })*/
     public Result Testpost(@RequestBody @Validated Person sutdent) {
 
-        log.error("走了这里==============================================="+sutdent.name+sutdent.age);
-        if (!(sutdent.name.equals("大熊") && sutdent.age == 18)) {
+        log.error("走了这里==============================================="+sutdent.getName()+sutdent.getAge());
+        if (!(sutdent.getName().equals("大熊") && sutdent.getAge() == 18)) {
                 throw new UsersException("该学生不存在");
             }
 
