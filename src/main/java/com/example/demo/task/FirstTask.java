@@ -40,6 +40,7 @@ public class FirstTask {
         logger.info("===开始调度程序3===");
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("YYYY-MM-dd HH24:mm:ss");
         System.out.println("333333"+simpleDateFormat.format(new Date()));
+        logger.info("这是一个分支冲突测试");
         logger.info("===结束一次调度3===");
     }
 }
