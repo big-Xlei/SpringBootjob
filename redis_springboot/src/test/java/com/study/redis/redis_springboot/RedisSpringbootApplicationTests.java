@@ -1,5 +1,7 @@
 package com.study.redis.redis_springboot;
 
+import com.study.redis.redis_springboot.bean.User;
+import com.study.redis.redis_springboot.utils.RedisUtil;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -13,15 +15,13 @@ class RedisSpringbootApplicationTests {
     void contextLoads() {
     }
     @Autowired
-    @Qualifier("redisTemplate")
-    private RedisTemplate redisTemplate;
-
+    private RedisUtil redisUtil;
 
     @Test
     public void testRedis(){
-        //数据库操作
-        redisTemplate.getConnectionFactory().getConnection().flushDb();
-        redisTemplate.opsForValue().set("xiong","lei");
-        System.out.println(redisTemplate.opsForValue().get("xiong"));
+        redisUtil.set("xiong","lei");
+        redisUtil.set("user",new User("大熊",20));
+        System.out.println(redisUtil.get("user"));
+        System.out.println(redisUtil.get("xiong"));
     }
 }
