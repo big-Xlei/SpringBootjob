@@ -17,11 +17,11 @@ class RedisSpringbootApplicationTests {
     @Autowired
     private RedisUtil redisUtil;
 
-    @Test
-    public void testRedis(){
-        redisUtil.set("xiong","lei");
-        redisUtil.set("user",new User("大熊",20));
-        System.out.println(redisUtil.get("user"));
-        System.out.println(redisUtil.get("xiong"));
-    }
+//    @Test
+//    public void testRedis(){
+//        redisUtil.set("xiong","lei");
+//        redisUtil.set("user",new User("大熊",20));
+//        System.out.println(redisUtil.get("user"));
+//        System.out.println(redisUtil.get("xiong"));
+//    }
 }
