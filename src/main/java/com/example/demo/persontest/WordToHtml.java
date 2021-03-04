@@ -24,6 +24,13 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.*;
 import java.util.UUID;
 
+/**
+*@Description: word转成html
+*@Author: xionglei
+*@Date: 2021/3/4 9:53
+*
+*@return:
+*/
 @Component
 public class WordToHtml {
     private static final Logger logger = LoggerFactory.getLogger(WordToHtml.class);
